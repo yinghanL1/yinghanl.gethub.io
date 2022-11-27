@@ -247,6 +247,170 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+  <div  id="jntu" style="width: 100%; height: 300px;"></div>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+<script>
+var chartDom = document.getElementById('jntu');
+var myChart = echarts.init(chartDom);
+var option = {
+series: [
+	{
+	type: 'graph',
+	layout: 'none',
+	animation: false,
+	data:[{
+			name:'C语言',
+			x:28,
+			y:17
+		},{
+			name:'requests',
+			x:36,
+			y:14
+		},{
+			name:'Urllib',
+			x:36,
+			y:12
+		},{
+			name:'网络爬虫',
+			x:32,
+			y:13
+		},{
+			name:'Django',
+			x:24,
+			y:14
+		},{
+			name:'Python3',
+			x:34,
+			y:10
+		},
+		{
+			name: 'Web开发',
+			x: 5,
+			y: 15,
+		},
+		{
+			name: 'Web前端',
+			x: 10,
+			y: 20,
+		},
+		{
+			name:'HTML5',
+			x:15,
+			y:25,
+		},{
+			name:'Vue3.js',
+			x:20,
+			y:24
+		},{
+			name:'CSS3',
+			x:16,
+			y:23
+		},{
+			name:'Javascript',
+			x:17,
+			y:21
+		},{
+			name:'Ajax',
+			x:23,
+			y:22
+		},{
+			name:'jQuery',
+			x:24,
+			y:20
+		},{
+			name: 'Web后端',
+			x: 10,
+			y: 10,
+		},{
+			name: 'PHP',
+			x: 18,
+			y: 8,
+		},{
+			name: '数据库',
+			x: 17,
+			y: 11,
+		},{
+			name: 'Mysql',
+			x: 24,
+			y: 9,
+		}],
+	edges: [{
+		source:'网络爬虫',
+		target:'requests'
+	},{
+		source:'网络爬虫',
+		target:'Urllib'
+	},{
+		source:'Python3',
+		target:'网络爬虫'
+	},{
+		source:'Django',
+		target:'Web开发'
+	},{
+		source:'Python3',
+		target:'Django'
+	},{
+		source:'Python3',
+		target:'数据库'
+	},{
+		source:'Python3',
+		target:'Mysql'
+	}
+	,{
+		source: 'Web开发',
+		target: 'Web前端'
+	},{
+		source:'Web前端',
+		target:'HTML5'
+	},{
+		source:'HTML5',
+		target:'Vue3.js'
+	},{
+		source:'Web前端',
+		target:'CSS3'
+	},{
+		source:'Web前端',
+		target:'Javascript'
+	},{
+		source:'Javascript',
+		target:'jQuery'
+	},{
+		source:'Javascript',
+		target:'Ajax'
+	},{
+		source:'Ajax',
+		target:'Web后端'
+	},{
+		source: 'Web开发',
+		target: 'Web后端'
+	},{
+		source: 'Web后端',
+		target: 'PHP'
+	},{
+		source:'PHP',
+		target:'Web前端'
+	},{
+		source:'PHP',
+		target:'数据库'
+	},{
+		source: 'Web后端',
+		target: '数据库'
+	},{
+		source: '数据库',
+		target: 'Mysql'
+	}],
+	label:{
+		show:true,
+		position:'right'
+	}
+	}
+]
+};
+
+myChart.setOption(option);
+
+</script>
+
   <section id="posts" class="posts-expand">
     
       
